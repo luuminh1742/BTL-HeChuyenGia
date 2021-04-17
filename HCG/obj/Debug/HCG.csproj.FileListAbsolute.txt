@@ -1,0 +1,14 @@
+D:\Sources\CSharp\HCG\HCG\bin\Debug\HCG.exe.config
+D:\Sources\CSharp\HCG\HCG\bin\Debug\HCG.exe
+D:\Sources\CSharp\HCG\HCG\bin\Debug\HCG.pdb
+D:\Sources\CSharp\HCG\HCG\obj\Debug\HCG.csprojAssemblyReference.cache
+D:\Sources\CSharp\HCG\HCG\obj\Debug\HCG.Properties.Resources.resources
+D:\Sources\CSharp\HCG\HCG\obj\Debug\HCG.Views.FormMain.resources
+D:\Sources\CSharp\HCG\HCG\obj\Debug\HCG.csproj.GenerateResource.cache
+D:\Sources\CSharp\HCG\HCG\obj\Debug\HCG.csproj.CoreCompileInputs.cache
+D:\Sources\CSharp\HCG\HCG\obj\Debug\HCG.exe
+D:\Sources\CSharp\HCG\HCG\obj\Debug\HCG.pdb
+D:\Sources\CSharp\HCG\HCG\obj\Debug\HCG.Views.UC_Consultant.resources
+D:\Sources\CSharp\HCG\HCG\obj\Debug\HCG.Views.UC_Home.resources
+D:\Sources\CSharp\HCG\HCG\obj\Debug\HCG.Views.UC_Infor.resources
+D:\Sources\CSharp\HCG\HCG\obj\Debug\HCG.Views.UC_Manage.resources

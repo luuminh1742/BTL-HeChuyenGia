@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ListBrand>
+  <Brand Id="D1">
+    <Name>Nokia</Name>
+  </Brand>
+  <Brand Id="D2">
+    <Name>OPPO</Name>
+  </Brand>
+  <Brand Id="D3">
+    <Name>Samsung</Name>
+  </Brand>
+  <Brand Id="D4">
+    <Name>Apple</Name>
+  </Brand>
+</ListBrand>

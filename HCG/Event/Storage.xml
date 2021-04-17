@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ListStorage>
+  <Storage Id="F1">
+    <Name>Lớn</Name>
+  </Storage>
+  <Storage Id="F2">
+    <Name>Vừa</Name>
+  </Storage>
+  <Storage Id="F3">
+    <Name>Nhỏ</Name>
+  </Storage>
+</ListStorage>

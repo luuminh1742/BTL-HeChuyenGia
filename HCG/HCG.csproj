@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{96BF030A-FFE6-4CBE-8E73-7492274B5BAE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HCG</RootNamespace>
+    <AssemblyName>HCG</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\BrandBLL.cs" />
+    <Compile Include="BLL\ColorBLL.cs" />
+    <Compile Include="BLL\MobileBLL.cs" />
+    <Compile Include="BLL\OperatingSystemBLL.cs" />
+    <Compile Include="BLL\PriceBLL.cs" />
+    <Compile Include="BLL\PurposeBLL.cs" />
+    <Compile Include="BLL\RulesBLL.cs" />
+    <Compile Include="DAL\BrandDAL.cs" />
+    <Compile Include="DAL\ColorDAL.cs" />
+    <Compile Include="DAL\MobileDAL.cs" />
+    <Compile Include="DAL\OperatingSystemDAL.cs" />
+    <Compile Include="DAL\PriceDAL.cs" />
+    <Compile Include="DAL\PurposeDAL.cs" />
+    <Compile Include="DAL\RulesDAL.cs" />
+    <Compile Include="db.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\AbstractDTO.cs" />
+    <Compile Include="DTO\BrandDTO.cs" />
+    <Compile Include="DTO\ColorDTO.cs" />
+    <Compile Include="DTO\MobileDTO.cs" />
+    <Compile Include="DTO\OperatingSystemDTO.cs" />
+    <Compile Include="DTO\PriceDTO.cs" />
+    <Compile Include="DTO\PurposeDTO.cs" />
+    <Compile Include="DTO\RuleDTO.cs" />
+    <Compile Include="DTO\ScreenDTO.cs" />
+    <Compile Include="DTO\StorageDTO.cs" />
+    <Compile Include="DTO\UserUseDTO.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\ForwardChainingUtil.cs" />
+    <Compile Include="Utils\MoveItem.cs" />
+    <Compile Include="Views\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UC_Consultant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UC_Consultant.Designer.cs">
+      <DependentUpon>UC_Consultant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UC_Home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UC_Home.Designer.cs">
+      <DependentUpon>UC_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UC_Infor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UC_Infor.Designer.cs">
+      <DependentUpon>UC_Infor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UC_Manage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UC_Manage.Designer.cs">
+      <DependentUpon>UC_Manage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UC_Consultant.resx">
+      <DependentUpon>UC_Consultant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UC_Home.resx">
+      <DependentUpon>UC_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UC_Infor.resx">
+      <DependentUpon>UC_Infor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UC_Manage.resx">
+      <DependentUpon>UC_Manage.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="db.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>db.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db.dbml.layout">
+      <DependentUpon>db.dbml</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Event\Brand.xml" />
+    <Content Include="Event\Color.xml" />
+    <Content Include="Event\OS.xml" />
+    <Content Include="Event\Price.xml" />
+    <Content Include="Event\Purpose.xml" />
+    <None Include="Images\logo.png" />
+    <None Include="Images\lambanner-thiet-ke-vertical-banner.jpg" />
+    <None Include="Images\product_25px.png" />
+    <None Include="Images\consultation_25px.png" />
+    <None Include="Images\copyright_25px.png" />
+    <Content Include="Event\Screen.xml" />
+    <Content Include="Event\Storage.xml" />
+    <Content Include="Event\Users.xml" />
+    <Content Include="Images\delete_15px.png" />
+    <None Include="Images\manager_25px.png" />
+    <None Include="Images\information_25px.png" />
+    <Content Include="Images\windows_client_25px.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

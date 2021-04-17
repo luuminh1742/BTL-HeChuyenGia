@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ListUser>
+  <Users Id="H1">
+    <Name>Học sinh/Sinh viên</Name>
+  </Users>
+  <Users Id="H2">
+    <Name>Người đi làm bình dân</Name>
+  </Users>
+  <Users Id="H3">
+    <Name>Doanh nhân</Name>
+  </Users>
+</ListUser>
