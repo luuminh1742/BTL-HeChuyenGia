@@ -14,7 +14,7 @@ namespace HCG.DAL
                 {
                     Id = x.Id,
                     Left = x.RLeft.Split('^'),
-                    Right = x.RRight.Split('^')
+                    Right = x.RRight
                 }
             ).ToList();
             return query;

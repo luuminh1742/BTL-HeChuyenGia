@@ -275,7 +275,7 @@ namespace HCG.Views
             // 
             this.uC_Infor1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uC_Infor1.Location = new System.Drawing.Point(0, 0);
-            this.uC_Infor1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uC_Infor1.Margin = new System.Windows.Forms.Padding(2);
             this.uC_Infor1.Name = "uC_Infor1";
             this.uC_Infor1.Size = new System.Drawing.Size(1134, 626);
             this.uC_Infor1.TabIndex = 7;

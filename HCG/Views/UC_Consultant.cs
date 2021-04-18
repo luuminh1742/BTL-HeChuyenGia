@@ -53,30 +53,31 @@ namespace HCG.Views
             assumptions.Add(price.Id.Trim());
             assumptions.Add(operatingSystem.Id.Trim());
             assumptions.Add(color.Id.Trim());
-            if(assumptions.Contains("B1") && assumptions.Contains("D4"))
+            /*if (assumptions.Contains("B1") && assumptions.Contains("D4"))
             {
-                MessageBox.Show("Bạn cần nhập lại hãng điện thoại hoặc hệ điều hành vì Apple không phải là hệ điều hành Android!","Lỗi",
-                    MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Bạn cần nhập lại hãng điện thoại hoặc hệ điều hành vì Apple không phải là hệ điều hành Android!", "Lỗi",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if(assumptions.Contains("B2") && !assumptions.Contains("D4"))
+            if (assumptions.Contains("B2") && !assumptions.Contains("D4"))
             {
                 MessageBox.Show("Bạn cần nhập lại hãng điện thoại hặc hệ điều hành!", "Lỗi",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            
+
             var mobiles = ForwardChainingUtil.Result(assumptions);
 
-            if(mobiles.Count == 0)
+            if (mobiles.Count == 0)
             {
                 MessageBox.Show("Chúng tôi xin lỗi vì không có loại điện thoại theo mô tả của bạn!", "Thông tin",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
-            }
+            }*/
             this.dgvResult.Visible = true;
-            this.dgvResult.DataSource = mobiles;
-            this.dgvResult.Columns["Id"].Visible = false;
+            this.dgvResult.DataSource = ForwardChainingUtil.testRule();
+            //this.dgvResult.DataSource = mobiles;
+            //this.dgvResult.Columns["Id"].Visible = false;
         }
 
        
