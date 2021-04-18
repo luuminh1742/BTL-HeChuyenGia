@@ -3,6 +3,7 @@ using HCG.DTO;
 using HCG.Utils;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace HCG.Views
@@ -13,7 +14,6 @@ namespace HCG.Views
         {
             InitializeComponent();
         }
-
         private void UC_Consultant_Load(object sender, EventArgs e)
         {
             this.dgvResult.Visible = false;
@@ -39,7 +39,6 @@ namespace HCG.Views
             cbbColor.ValueMember = "Name";
 
         }
-
         private void btnCounselling_Click(object sender, EventArgs e)
         {
             var assumptions = new List<string>();
@@ -53,7 +52,7 @@ namespace HCG.Views
             assumptions.Add(price.Id.Trim());
             assumptions.Add(operatingSystem.Id.Trim());
             assumptions.Add(color.Id.Trim());
-            /*if (assumptions.Contains("B1") && assumptions.Contains("D4"))
+            if (assumptions.Contains("B1") && assumptions.Contains("D4"))
             {
                 MessageBox.Show("Bạn cần nhập lại hãng điện thoại hoặc hệ điều hành vì Apple không phải là hệ điều hành Android!", "Lỗi",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -73,11 +72,16 @@ namespace HCG.Views
                 MessageBox.Show("Chúng tôi xin lỗi vì không có loại điện thoại theo mô tả của bạn!", "Thông tin",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
-            }*/
+            }
             this.dgvResult.Visible = true;
-            this.dgvResult.DataSource = ForwardChainingUtil.testRule();
-            //this.dgvResult.DataSource = mobiles;
-            //this.dgvResult.Columns["Id"].Visible = false;
+            /*List<string> checkRule = new List<string>();
+            ForwardChainingUtil.testRule().ForEach(rule =>
+            {
+                checkRule.Add(string.Join("^", rule.Left) + " -> " + rule.Right);
+            });
+            this.dgvResult.DataSource = checkRule.Select(x => new { Value = x }).ToList();*/
+            this.dgvResult.DataSource = mobiles;
+            this.dgvResult.Columns["Id"].Visible = false;
         }
 
        

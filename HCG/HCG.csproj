@@ -158,19 +158,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Event\Brand.xml" />
-    <Content Include="Event\Color.xml" />
-    <Content Include="Event\OS.xml" />
-    <Content Include="Event\Price.xml" />
-    <Content Include="Event\Purpose.xml" />
     <None Include="Images\logo.png" />
     <None Include="Images\lambanner-thiet-ke-vertical-banner.jpg" />
     <None Include="Images\product_25px.png" />
     <None Include="Images\consultation_25px.png" />
     <None Include="Images\copyright_25px.png" />
-    <Content Include="Event\Screen.xml" />
-    <Content Include="Event\Storage.xml" />
-    <Content Include="Event\Users.xml" />
     <Content Include="Images\delete_15px.png" />
     <None Include="Images\manager_25px.png" />
     <None Include="Images\information_25px.png" />

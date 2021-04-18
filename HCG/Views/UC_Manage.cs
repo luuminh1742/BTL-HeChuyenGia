@@ -22,7 +22,7 @@ namespace HCG.Views
             RulesBLL.FindAll().ForEach(rule => {
                 rules.Add(string.Join("^",rule.Left)+" -> "+ rule.Right);
             });
-            dgvRules.DataSource = rules.Select(x => new { Value = x }).ToList();
+            dgvRules.DataSource = rules.Select(x => new { Rule = x }).ToList();
             dgvRules.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
     }
