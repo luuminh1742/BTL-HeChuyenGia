@@ -123,6 +123,26 @@ namespace HCG.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo_haui {
+            get {
+                object obj = ResourceManager.GetObject("logo-haui", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_haui1 {
+            get {
+                object obj = ResourceManager.GetObject("logo-haui1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap manager_25px {
             get {
                 object obj = ResourceManager.GetObject("manager_25px", resourceCulture);

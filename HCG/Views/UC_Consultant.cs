@@ -87,8 +87,7 @@ namespace HCG.Views
                 assumptions.Add(price.Id.Trim());
             }
             
-            
-            
+      
             
             
             

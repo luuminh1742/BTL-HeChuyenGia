@@ -166,7 +166,7 @@
     <Content Include="Images\delete_15px.png" />
     <None Include="Images\manager_25px.png" />
     <None Include="Images\information_25px.png" />
-    <Content Include="Images\logo-ngang.png" />
+    <Content Include="Images\logo-haui.png" />
     <Content Include="Images\windows_client_25px.png" />
   </ItemGroup>
   <ItemGroup />

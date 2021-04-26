@@ -128,7 +128,7 @@ namespace HCG.Views
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(263, 52);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Hãng điện thoại yêu thích cẩu bạn là gì?";
+            this.label5.Text = "Hãng điện thoại yêu thích của bạn là gì?";
             // 
             // label6
             // 
@@ -136,9 +136,9 @@ namespace HCG.Views
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(3, 94);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(188, 26);
+            this.label6.Size = new System.Drawing.Size(74, 26);
             this.label6.TabIndex = 0;
-            this.label6.Text = "Đối tượng sử dụng";
+            this.label6.Text = "Bạn là";
             // 
             // cbbBrand
             // 
@@ -166,9 +166,9 @@ namespace HCG.Views
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(3, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(74, 26);
+            this.label7.Size = new System.Drawing.Size(198, 26);
             this.label7.TabIndex = 0;
-            this.label7.Text = "Bạn là";
+            this.label7.Text = "Giới tính của bạn là";
             // 
             // cbbPurpose
             // 
