@@ -4,15 +4,15 @@ using System.Linq;
 
 namespace HCG.DAL
 {
-    class OperatingSystemDAL
+    class GenderDAL
     {
         private dbDataContext db = new dbDataContext();
-        public List<OperatingSystemDTO> FindAll()
+        public List<GenderDTO> FindAll()
         {
-            var query = db.OperatingSystems.Select(x =>
-                new OperatingSystemDTO
+            var query = db.Genders.Select(x =>
+                new GenderDTO
                 {
-                    Id = x.Id,
+                    Id = x.Id.Trim(),
                     Name = x.Name
                 }
             ).ToList();

@@ -1,6 +1,6 @@
 ﻿namespace HCG.DTO
 {
-    class ScreenDTO : AbstractDTO
+    class GenderDTO:AbstractDTO
     {
     }
 }

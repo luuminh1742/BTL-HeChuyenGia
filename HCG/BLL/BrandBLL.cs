@@ -9,7 +9,12 @@ namespace HCG.BLL
         private static BrandDAL brandDAL = new BrandDAL();
         public static List<BrandDTO> FindAll()
         {
-            return brandDAL.FindAll();
+            BrandDTO brandDTO = new BrandDTO();
+            brandDTO.Id = "BR0";
+            brandDTO.Name = "Không biết";
+            var result = brandDAL.FindAll();
+            result.Add(brandDTO);
+            return result;
         }
     }
 }

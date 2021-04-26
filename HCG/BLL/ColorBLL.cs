@@ -9,7 +9,12 @@ namespace HCG.BLL
         private static ColorDAL colorDAL = new ColorDAL();
         public static List<ColorDTO> FindAll()
         {
-            return colorDAL.FindAll();
+            var result = colorDAL.FindAll();
+            ColorDTO colorDTO = new ColorDTO();
+            colorDTO.Id = "CL0";
+            colorDTO.Name = "Không biết";
+            result.Add(colorDTO);
+            return result;
         }
     }
 }

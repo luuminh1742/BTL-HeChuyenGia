@@ -28,8 +28,8 @@ namespace HCG.Utils
             var result = new List<MobileDTO>();
             // Lay tat ca cac luat trong database
             List<RuleDTO> rules = OptimizeRule(RulesBLL.FindAll());
+            //List<RuleDTO> rules = RulesBLL.FindAll();
             List<RuleDTO> rulesCopy = new List<RuleDTO>(rules);
-
             // Lay tat ca cac doi tuong mobile trong database
             var mobiles = MobileBLL.FindAll();
             //var mobileId = mobile.Id;
@@ -37,7 +37,7 @@ namespace HCG.Utils
             List<string> mediate = assumptions;
             // Loc SAT
             Queue<int> SAT = new Queue<int>();
-            SAT = FilterSAT(rulesCopy, mediate);
+            FilterSAT(SAT,rulesCopy, mediate);
             // Duyet SAT cho den khi tap SAT rong
             while (SAT.Count != 0)
             {
@@ -51,7 +51,7 @@ namespace HCG.Utils
                 // Them su kien vao bien trung gian
                 mediate.Add(rule.Right);
                 // Tim SAT
-                SAT = FilterSAT(rulesCopy, mediate);
+                FilterSAT(SAT,rulesCopy, mediate);
 
                 if (rulesCopy.Count == 0) break;
             }
@@ -73,9 +73,9 @@ namespace HCG.Utils
         /// <param name="rules"></param>
         /// <param name="mediate"></param>
         /// <returns></returns>
-        private static Queue<int> FilterSAT(List<RuleDTO> rules, List<string> mediate)
+        private static void FilterSAT(Queue<int> SAT,List<RuleDTO> rules, List<string> mediate)
         {
-            var result = new Queue<int>();
+            //var result = new Queue<int>();
             // Tim cac luat tu cuoi 
             for(int i = rules.Count - 1; i >= 0; i--)
             {
@@ -96,11 +96,11 @@ namespace HCG.Utils
                 // Dong thoi xoa luat day khoi tap luat
                 if (isContainAll)
                 {
-                    result.Enqueue(rule.Id);
+                    SAT.Enqueue(rule.Id);
                     rules.Remove(rule);
                 }
             }
-            return result;
+            //return SAT;
         }
 
 
@@ -120,7 +120,7 @@ namespace HCG.Utils
         }
 
         /// <summary>
-        /// Phuong thuc xoa su kien du thua trong tap luat
+        /// Phuong thuc <b>xoa su kien du thua</b> trong tap luat
         /// </summary>
         /// <param name="rules"></param>
         private static void RemoveEventRedundant(List<RuleDTO> rules)
@@ -132,7 +132,6 @@ namespace HCG.Utils
             var mediate = new List<string>();
             while (i < rules.Count)
             {
-                
                 if (rules[i].Left.Length == 1)
                 {
                     i++;
@@ -140,7 +139,6 @@ namespace HCG.Utils
                 }
                 rulesCopy.AddRange(rules);
                 string[] checkRuleLeft = (string[])rules[i].Left;
-                
                 foreach (string eventLeft in checkRuleLeft)
                 {
                     //checkRuleTemp = rules[i];
@@ -149,38 +147,33 @@ namespace HCG.Utils
                     
                     mediate.AddRange(rules[i].Left);
 
-                    foreach (RuleDTO rule in rules)
+                    // Loc SAT
+                    FilterSAT(SAT, rulesCopy, mediate);
+                    // Duyet SAT cho den khi tap SAT rong
+                    while (SAT.Count != 0)
                     {
-                        // Loc SAT
-                        SAT = FilterSAT(rulesCopy, mediate);
-                        // Duyet SAT cho den khi tap SAT rong
-                        while (SAT.Count != 0)
-                        {
-                            // Xet rule dau tien trong tap SAT
-                            // Lay ra ruleId va xoa khoi hang doi
-                            var ruleId = SAT.Dequeue();
-                            // Tim rule theo ruleid
-                            RuleDTO r = rules.Find(item => item.Id == ruleId);
-                            // Neu khong tim duoc rule thì bo qu vong lap nay
-                            if (r == null) continue;
-                            // Them su kien vao bien trung gian
-                            mediate.Add(r.Right);
-                            // Tim SAT
-                            SAT = FilterSAT(rulesCopy, mediate);
-                            if (rulesCopy.Count == 0) break;
-                        }
+                        // Xet rule dau tien trong tap SAT
+                        // Lay ra ruleId va xoa khoi hang doi
+                        var ruleId = SAT.Dequeue();
+                        // Tim rule theo ruleid
+                        RuleDTO r = rules.Find(item => item.Id == ruleId);
+                        // Neu khong tim duoc rule thì bo qu vong lap nay
+                        if (r == null) continue;
+                        // Them su kien vao bien trung gian
+                        mediate.Add(r.Right);
+                        // Tim SAT
+                        FilterSAT(SAT, rulesCopy, mediate);
+                        if (rulesCopy.Count == 0) break;
                     }
                     if (!mediate.Contains(eventLeft))
                     {
                         rules[i].Left = Append(rules[i].Left,eventLeft);
                     }
-
-                    
+                    SAT.Clear();
+                    mediate.Clear();
+                    rulesCopy.Clear();
                 }
                 i++;
-                SAT.Clear();
-                mediate.Clear();
-                rulesCopy.Clear();
             }
         }
 
@@ -202,6 +195,7 @@ namespace HCG.Utils
             RemoveEventRedundant(rules);
             return rules;
         }
+
         /// <summary>
         /// Phuong thuc <b>loai bo luat du thua</b><br/>
         /// <i>Ngay cap nhat : 18/04/2021</i>
@@ -225,7 +219,7 @@ namespace HCG.Utils
                 {
                     if (rule.Equals(checkRule)) continue;
                     // Loc SAT
-                    SAT = FilterSAT(rulesCopy, mediate);
+                    FilterSAT(SAT,rulesCopy, mediate);
                     // Duyet SAT cho den khi tap SAT rong
                     while (SAT.Count != 0)
                     {
@@ -239,7 +233,7 @@ namespace HCG.Utils
                         // Them su kien vao bien trung gian
                         mediate.Add(r.Right);
                         // Tim SAT
-                        SAT = FilterSAT(rulesCopy, mediate);
+                        FilterSAT(SAT,rulesCopy, mediate);
                         if (rulesCopy.Count == 0) break;
                     }
                 }

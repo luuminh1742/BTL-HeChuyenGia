@@ -12,7 +12,7 @@ namespace HCG.DAL
             var query = db.Prices.Select(x =>
                 new PriceDTO
                 {
-                    Id = x.Id,
+                    Id = x.Id.Trim(),
                     Name = x.MinToMaxPrice
                 }
             ).ToList();

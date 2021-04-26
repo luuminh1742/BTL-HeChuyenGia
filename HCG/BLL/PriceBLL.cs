@@ -9,7 +9,12 @@ namespace HCG.BLL
         private static PriceDAL priceDAL = new PriceDAL();
         public static List<PriceDTO> FindAll()
         {
-            return priceDAL.FindAll();
+            PriceDTO priceDTO = new PriceDTO();
+            priceDTO.Id = "PR0";
+            priceDTO.Name = "Không biết";
+            var result = priceDAL.FindAll();
+            result.Add(priceDTO);
+            return result;
         }
     }
 }

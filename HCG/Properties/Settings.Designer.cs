@@ -33,5 +33,16 @@ namespace HCG.Properties {
                 return ((string)(this["PhoneStoreConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ANHMINH\\SQLEXPRESS;Initial Catalog=PhoneStore;Integrated Security=Tru" +
+            "e")]
+        public string PhoneStoreConnectionString1 {
+            get {
+                return ((string)(this["PhoneStoreConnectionString1"]));
+            }
+        }
     }
 }

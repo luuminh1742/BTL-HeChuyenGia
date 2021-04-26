@@ -1,5 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PhoneStore" Class="dbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-AF97049\SQLEXPRESS;Initial Catalog=PhoneStore;Integrated Security=True" SettingsObjectName="HCG.Properties.Settings" SettingsPropertyName="PhoneStoreConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ANHMINH\SQLEXPRESS;Initial Catalog=PhoneStore;Integrated Security=True" SettingsObjectName="HCG.Properties.Settings" SettingsPropertyName="PhoneStoreConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Brand" Member="Brands">
+    <Type Name="Brand">
+      <Column Name="Id" Type="System.String" DbType="Char(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Rules" Member="Rules">
+    <Type Name="Rule">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RLeft" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="RRight" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Color" Member="Colors">
+    <Type Name="Color">
+      <Column Name="Id" Type="System.String" DbType="Char(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Gender" Member="Genders">
+    <Type Name="Gender">
+      <Column Name="Id" Type="System.String" DbType="Char(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.Mobile" Member="Mobiles">
     <Type Name="Mobile">
       <Column Name="Id" Type="System.String" DbType="Char(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -14,16 +39,10 @@
       <Column Name="OperatingSystem" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.Brand" Member="Brands">
-    <Type Name="Brand">
+  <Table Name="dbo.ObjectsUsing" Member="ObjectsUsings">
+    <Type Name="ObjectsUsing">
       <Column Name="Id" Type="System.String" DbType="Char(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Color" Member="Colors">
-    <Type Name="Color">
-      <Column Name="Id" Type="System.String" DbType="Char(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Name" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.OperatingSystem" Member="OperatingSystems">
@@ -42,13 +61,6 @@
     <Type Name="Purpose">
       <Column Name="Id" Type="System.String" DbType="Char(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Rules" Member="Rules">
-    <Type Name="Rule">
-      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="RLeft" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="RRight" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

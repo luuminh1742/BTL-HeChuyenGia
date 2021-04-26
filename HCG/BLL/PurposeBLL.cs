@@ -9,7 +9,12 @@ namespace HCG.BLL
         private static PurposeDAL purposeDAL = new PurposeDAL();
         public static List<PurposeDTO> FindAll()
         {
-            return purposeDAL.FindAll();
+            var purposeDTO = new PurposeDTO();
+            purposeDTO.Id = "PP0";
+            purposeDTO.Name = "Không biết";
+            var result = purposeDAL.FindAll();
+            result.Add(purposeDTO);
+            return result;
         }
     }
 }

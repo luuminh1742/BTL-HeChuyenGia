@@ -4,13 +4,13 @@ using System.Linq;
 
 namespace HCG.DAL
 {
-    class PurposeDAL
+    class ObjectUsingDAL
     {
         private dbDataContext db = new dbDataContext();
-        public List<PurposeDTO> FindAll()
+        public List<ObjectUsingDTO> FindAll()
         {
-            var query = db.Purposes.Select(x =>
-                new PurposeDTO
+            var query = db.ObjectsUsings.Select(x =>
+                new ObjectUsingDTO
                 {
                     Id = x.Id.Trim(),
                     Name = x.Name

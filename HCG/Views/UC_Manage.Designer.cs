@@ -31,14 +31,14 @@ namespace HCG.Views
         {
             this.tcManage = new System.Windows.Forms.TabControl();
             this.tpProduct = new System.Windows.Forms.TabPage();
-            this.tpRules = new System.Windows.Forms.TabPage();
-            this.tpEvent = new System.Windows.Forms.TabPage();
             this.dgvProduct = new System.Windows.Forms.DataGridView();
+            this.tpRules = new System.Windows.Forms.TabPage();
             this.dgvRules = new System.Windows.Forms.DataGridView();
+            this.tpEvent = new System.Windows.Forms.TabPage();
             this.tcManage.SuspendLayout();
             this.tpProduct.SuspendLayout();
-            this.tpRules.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
+            this.tpRules.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRules)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,6 +66,16 @@ namespace HCG.Views
             this.tpProduct.Text = "Sản phẩm";
             this.tpProduct.UseVisualStyleBackColor = true;
             // 
+            // dgvProduct
+            // 
+            this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProduct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvProduct.Location = new System.Drawing.Point(3, 3);
+            this.dgvProduct.Name = "dgvProduct";
+            this.dgvProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvProduct.Size = new System.Drawing.Size(1023, 619);
+            this.dgvProduct.TabIndex = 0;
+            // 
             // tpRules
             // 
             this.tpRules.Controls.Add(this.dgvRules);
@@ -77,25 +87,6 @@ namespace HCG.Views
             this.tpRules.Text = "Tập luật";
             this.tpRules.UseVisualStyleBackColor = true;
             // 
-            // tpEvent
-            // 
-            this.tpEvent.Location = new System.Drawing.Point(4, 29);
-            this.tpEvent.Name = "tpEvent";
-            this.tpEvent.Padding = new System.Windows.Forms.Padding(3);
-            this.tpEvent.Size = new System.Drawing.Size(998, 599);
-            this.tpEvent.TabIndex = 2;
-            this.tpEvent.Text = "Sự kiện";
-            this.tpEvent.UseVisualStyleBackColor = true;
-            // 
-            // dgvProduct
-            // 
-            this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProduct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvProduct.Location = new System.Drawing.Point(3, 3);
-            this.dgvProduct.Name = "dgvProduct";
-            this.dgvProduct.Size = new System.Drawing.Size(1023, 619);
-            this.dgvProduct.TabIndex = 0;
-            // 
             // dgvRules
             // 
             this.dgvRules.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -104,6 +95,16 @@ namespace HCG.Views
             this.dgvRules.Name = "dgvRules";
             this.dgvRules.Size = new System.Drawing.Size(1023, 619);
             this.dgvRules.TabIndex = 0;
+            // 
+            // tpEvent
+            // 
+            this.tpEvent.Location = new System.Drawing.Point(4, 29);
+            this.tpEvent.Name = "tpEvent";
+            this.tpEvent.Padding = new System.Windows.Forms.Padding(3);
+            this.tpEvent.Size = new System.Drawing.Size(1029, 625);
+            this.tpEvent.TabIndex = 2;
+            this.tpEvent.Text = "Sự kiện";
+            this.tpEvent.UseVisualStyleBackColor = true;
             // 
             // UC_Manage
             // 
@@ -115,8 +116,8 @@ namespace HCG.Views
             this.Load += new System.EventHandler(this.UC_Manage_Load);
             this.tcManage.ResumeLayout(false);
             this.tpProduct.ResumeLayout(false);
-            this.tpRules.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
+            this.tpRules.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRules)).EndInit();
             this.ResumeLayout(false);
 

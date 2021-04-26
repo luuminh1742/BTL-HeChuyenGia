@@ -12,7 +12,7 @@ namespace HCG.DAL
             var query = db.Colors.Select(x =>
                 new ColorDTO
                 {
-                    Id = x.Id,
+                    Id = x.Id.Trim(),
                     Name = x.Name
                 }
             ).ToList();

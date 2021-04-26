@@ -13,8 +13,8 @@ namespace HCG.DAL
                 new RuleDTO
                 {
                     Id = x.Id,
-                    Left = x.RLeft.Split('^'),
-                    Right = x.RRight
+                    Left = x.RLeft.Trim().Split('^'),
+                    Right = x.RRight.Trim()
                 }
             ).ToList();
             return query;

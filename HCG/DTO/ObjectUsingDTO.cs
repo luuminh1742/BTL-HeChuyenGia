@@ -1,6 +1,6 @@
 ﻿namespace HCG.DTO
 {
-    class StorageDTO : AbstractDTO
+    class ObjectUsingDTO:AbstractDTO
     {
     }
 }

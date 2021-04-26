@@ -38,12 +38,11 @@ namespace HCG.Views
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(152, 24);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(203, 30);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(501, 24);
+            this.label2.Size = new System.Drawing.Size(656, 29);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Lưu Bá Minh - 2018600108 && Trần Chiến Công - 2018600...";
+            this.label2.Text = "Lưu Bá Minh - 2018600108 && Trần Chiến Công - 2018600953";
             // 
             // label1
             // 
@@ -51,10 +50,9 @@ namespace HCG.Views
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Image = global::HCG.Properties.Resources.copyright_25px;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(24, 24);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(32, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 24);
+            this.label1.Size = new System.Drawing.Size(153, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "    Copyright";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -63,23 +61,22 @@ namespace HCG.Views
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(24, 69);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(32, 85);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(374, 24);
+            this.label3.Size = new System.Drawing.Size(483, 29);
             this.label3.TabIndex = 0;
             this.label3.Text = "HANOI UNIVERSITY OF INDUSTRY || HaUI";
             // 
             // UC_Infor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_Infor";
-            this.Size = new System.Drawing.Size(1061, 348);
+            this.Size = new System.Drawing.Size(1415, 428);
             this.ResumeLayout(false);
             this.PerformLayout();
 

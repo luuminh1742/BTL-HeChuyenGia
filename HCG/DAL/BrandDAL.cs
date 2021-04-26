@@ -12,7 +12,7 @@ namespace HCG.DAL
             var query = db.Brands.Select(x =>
                 new BrandDTO
                 {
-                    Id = x.Id,
+                    Id = x.Id.Trim(),
                     Name = x.Name
                 }
             ).ToList();
