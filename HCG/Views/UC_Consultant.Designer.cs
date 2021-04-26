@@ -203,7 +203,7 @@ namespace HCG.Views
             // btnCounselling
             // 
             this.btnCounselling.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCounselling.Location = new System.Drawing.Point(567, 653);
+            this.btnCounselling.Location = new System.Drawing.Point(570, 630);
             this.btnCounselling.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCounselling.Name = "btnCounselling";
             this.btnCounselling.Size = new System.Drawing.Size(103, 37);
@@ -246,6 +246,7 @@ namespace HCG.Views
             this.dgvResult.Margin = new System.Windows.Forms.Padding(4);
             this.dgvResult.Name = "dgvResult";
             this.dgvResult.RowHeadersWidth = 51;
+            this.dgvResult.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvResult.Size = new System.Drawing.Size(567, 631);
             this.dgvResult.TabIndex = 5;
             // 

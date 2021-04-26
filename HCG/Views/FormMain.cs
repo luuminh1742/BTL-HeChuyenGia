@@ -28,7 +28,7 @@ namespace HCG.Views
             SidePanel.Height = btnHome.Height;
             SidePanel.Top = btnHome.Top;
             uC_Home1.BringToFront();
-            lbTitle.Text = "Trang chủ";
+            lbTitle.Text = " Trang chủ";
         }
 
         
@@ -37,7 +37,7 @@ namespace HCG.Views
             SidePanel.Height = btnConsultant.Height;
             SidePanel.Top = btnConsultant.Top;
             uC_Consultant1.BringToFront();
-            lbTitle.Text = "Tư vấn";
+            lbTitle.Text = " Tư vấn";
         }
         private void btnCloseApp_Click(object sender, System.EventArgs e)
         {
@@ -59,7 +59,7 @@ namespace HCG.Views
             SidePanel.Height = btnInfor.Height;
             SidePanel.Top = btnInfor.Top;
             uC_Infor1.BringToFront();
-            lbTitle.Text = "Thông tin";
+            lbTitle.Text = " Thông tin";
         }
 
         private void btnManager_Click(object sender, System.EventArgs e)
@@ -67,7 +67,26 @@ namespace HCG.Views
             SidePanel.Height = btnManager.Height;
             SidePanel.Top = btnManager.Top;
             uC_Manage1.BringToFront();
-            lbTitle.Text = "Quản lý";
+            lbTitle.Text = " Quản lý";
+        }
+
+        private void btnFullScreen_Click(object sender, System.EventArgs e)
+        {
+            /*this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;*/
+
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+                return;
+            }
+            this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void btnMinimized_Click(object sender, System.EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

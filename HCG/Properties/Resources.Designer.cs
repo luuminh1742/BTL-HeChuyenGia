@@ -93,6 +93,26 @@ namespace HCG.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap full_screen_15px {
+            get {
+                object obj = ResourceManager.GetObject("full_screen_15px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap full_screen_20px {
+            get {
+                object obj = ResourceManager.GetObject("full_screen_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap information_25px {
             get {
                 object obj = ResourceManager.GetObject("information_25px", resourceCulture);
@@ -156,6 +176,16 @@ namespace HCG.Properties {
         internal static System.Drawing.Bitmap product_25px {
             get {
                 object obj = ResourceManager.GetObject("product_25px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap subtract_20px {
+            get {
+                object obj = ResourceManager.GetObject("subtract_20px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
