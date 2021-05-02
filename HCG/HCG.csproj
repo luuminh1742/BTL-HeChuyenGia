@@ -136,7 +136,6 @@
     <EmbeddedResource Include="Views\UC_Manage.resx">
       <DependentUpon>UC_Manage.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="BaoCao\BaoCao_BTL-HeChuyenGia_TuVanMuaDienThoai.pdf" />
     <None Include="db.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>db.designer.cs</LastGenOutput>
