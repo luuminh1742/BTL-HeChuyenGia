@@ -46,9 +46,12 @@ namespace HCG.Views
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvResult = new System.Windows.Forms.DataGridView();
+            this.lbResult = new System.Windows.Forms.Label();
+            this.pnResult = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResult)).BeginInit();
+            this.pnResult.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -214,6 +217,7 @@ namespace HCG.Views
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.pnResult);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.dgvResult);
             this.panel1.Controls.Add(this.tableLayoutPanel1);
@@ -241,14 +245,39 @@ namespace HCG.Views
             this.dgvResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvResult.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvResult.BackgroundColor = System.Drawing.Color.White;
             this.dgvResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvResult.Location = new System.Drawing.Point(696, 59);
+            this.dgvResult.Location = new System.Drawing.Point(696, 134);
             this.dgvResult.Margin = new System.Windows.Forms.Padding(4);
             this.dgvResult.Name = "dgvResult";
             this.dgvResult.RowHeadersWidth = 51;
             this.dgvResult.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvResult.Size = new System.Drawing.Size(567, 631);
+            this.dgvResult.Size = new System.Drawing.Size(567, 556);
             this.dgvResult.TabIndex = 5;
+            this.dgvResult.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvResult_CellDoubleClick);
+            // 
+            // lbResult
+            // 
+            this.lbResult.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbResult.Location = new System.Drawing.Point(0, 0);
+            this.lbResult.Name = "lbResult";
+            this.lbResult.Size = new System.Drawing.Size(567, 68);
+            this.lbResult.TabIndex = 8;
+            this.lbResult.Text = "Kết quả tư vấn";
+            this.lbResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pnResult
+            // 
+            this.pnResult.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnResult.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.pnResult.Controls.Add(this.lbResult);
+            this.pnResult.Location = new System.Drawing.Point(696, 59);
+            this.pnResult.Name = "pnResult";
+            this.pnResult.Size = new System.Drawing.Size(567, 68);
+            this.pnResult.TabIndex = 9;
             // 
             // UC_Consultant
             // 
@@ -264,6 +293,7 @@ namespace HCG.Views
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResult)).EndInit();
+            this.pnResult.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -286,5 +316,7 @@ namespace HCG.Views
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cbbObjectUsing;
         private System.Windows.Forms.ComboBox cbbGender;
+        private System.Windows.Forms.Panel pnResult;
+        private System.Windows.Forms.Label lbResult;
     }
 }

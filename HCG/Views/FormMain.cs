@@ -1,7 +1,6 @@
-﻿using HCG.BLL;
-using HCG.Utils;
-using System.Drawing;
+﻿using HCG.Utils;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace HCG.Views
 {

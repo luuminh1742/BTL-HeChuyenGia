@@ -42,32 +42,32 @@ namespace HCG.Views
         {
             StringBuilder gd = new StringBuilder("");
             GenderBLL.FindAll().ForEach(x=>{
-                gd.Append(x.Id+" : "+x.Name+"\n");
+                gd.Append(x.ToString());
             });
             StringBuilder ou = new StringBuilder();
             ObjectUsingBLL.FindAll().ForEach(x =>
             {
-                ou.Append(x.Id + " : " + x.Name + "\n");
+                ou.Append(x.ToString());
             });
             StringBuilder pp = new StringBuilder();
             PurposeBLL.FindAll().ForEach(x =>
             {
-                pp.Append(x.Id + " : " + x.Name + "\n");
+                pp.Append(x.ToString());
             });
             StringBuilder pr = new StringBuilder();
             PriceBLL.FindAll().ForEach(x =>
             {
-                pr.Append(x.Id + " : " + x.Name + "\n");
+                pr.Append(x.ToString());
             });
             StringBuilder br = new StringBuilder();
             BrandBLL.FindAll().ForEach(x =>
             {
-                br.Append(x.Id + " : " + x.Name + "\n");
+                br.Append(x.ToString());
             });
             StringBuilder cl = new StringBuilder();
             ColorBLL.FindAll().ForEach(x =>
             {
-                cl.Append(x.Id + " : " + x.Name + "\n");
+                cl.Append(x.ToString());
             });
             lbGD.Text = gd.ToString();
             lbOU.Text = ou.ToString();

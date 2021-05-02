@@ -32,6 +32,7 @@ namespace HCG.Views
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lbDocumentation = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -67,10 +68,23 @@ namespace HCG.Views
             this.label1.Text = "    Copyright";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // lbDocumentation
+            // 
+            this.lbDocumentation.AutoSize = true;
+            this.lbDocumentation.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDocumentation.ForeColor = System.Drawing.Color.Blue;
+            this.lbDocumentation.Location = new System.Drawing.Point(36, 136);
+            this.lbDocumentation.Name = "lbDocumentation";
+            this.lbDocumentation.Size = new System.Drawing.Size(174, 29);
+            this.lbDocumentation.TabIndex = 11;
+            this.lbDocumentation.Text = "Documentation";
+            this.lbDocumentation.Click += new System.EventHandler(this.lbDocumentation_Click);
+            // 
             // UC_Infor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lbDocumentation);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
@@ -87,5 +101,6 @@ namespace HCG.Views
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbDocumentation;
     }
 }

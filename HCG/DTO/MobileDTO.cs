@@ -12,5 +12,18 @@
         public string Camera { get; set; }
         public string Storage { get; set; }
         public string OperatingSystem { get; set; }
+
+        public override string ToString()
+        {
+            return "Name: "+Name+
+                "\nPrice: " +Price+
+                "\nBrand: " +Brand+
+                "\nColor: " + Color+
+                "\nScreen: " +Screen+
+                "\nRam: " +Ram+
+                "\nCamera: " +Camera+
+                "\nStorage: " +Storage+
+                "\nOperating System: "+OperatingSystem;
+        }
     }
 }

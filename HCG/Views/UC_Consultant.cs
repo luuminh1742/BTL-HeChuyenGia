@@ -19,6 +19,7 @@ namespace HCG.Views
             
             LoadData();
             this.dgvResult.Visible = false;
+            pnResult.Visible = false;
         }
 
         private void LoadData()
@@ -86,8 +87,14 @@ namespace HCG.Views
             {
                 assumptions.Add(price.Id.Trim());
             }
-            
-      
+
+
+            if (assumptions.Count < 3)
+            {
+                MessageBox.Show("Bạn cần trả lời thêm câu hỏi để chúng tôi tư vấn!", "Cảnh báo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             
             
             
@@ -113,6 +120,7 @@ namespace HCG.Views
                 return;
             }
             this.dgvResult.Visible = true;
+            pnResult.Visible = true;
             /*List<string> checkRule = new List<string>();
             ForwardChainingUtil.testRule().ForEach(rule =>
             {
@@ -121,6 +129,16 @@ namespace HCG.Views
             this.dgvResult.DataSource = checkRule.Select(x => new { Value = x }).ToList();*/
             this.dgvResult.DataSource = mobiles;
             this.dgvResult.Columns["Id"].Visible = false;
+        }
+
+
+        private void dgvResult_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var row = e.RowIndex;
+            string Id = dgvResult.Rows[row].Cells[0].Value.ToString();
+            MobileDTO mobileDTO = MobileBLL.FindById(Id);
+
+            MessageBox.Show(mobileDTO.ToString(),"Thông tin điện thoại",MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
     }
 }

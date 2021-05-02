@@ -12,5 +12,9 @@ namespace HCG.BLL
         {
             return mobileDAL.FindAll();
         }
+        public static MobileDTO FindById(string id)
+        {
+            return mobileDAL.FindById(id);
+        }
     }
 }

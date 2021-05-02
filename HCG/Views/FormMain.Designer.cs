@@ -31,29 +31,29 @@ namespace HCG.Views
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panelSidebar = new System.Windows.Forms.Panel();
-            this.SidePanel = new System.Windows.Forms.Panel();
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelHeader1 = new System.Windows.Forms.Panel();
-            this.panelHeader2 = new System.Windows.Forms.Panel();
-            this.lbTitle = new System.Windows.Forms.Label();
-            this.btnMinimized = new System.Windows.Forms.Button();
-            this.btnFullScreen = new System.Windows.Forms.Button();
-            this.btnCloseApp = new System.Windows.Forms.Button();
             this.btnInfor = new System.Windows.Forms.Button();
             this.btnManager = new System.Windows.Forms.Button();
             this.btnConsultant = new System.Windows.Forms.Button();
+            this.SidePanel = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.Button();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelHeader1 = new System.Windows.Forms.Panel();
+            this.panelHeader2 = new System.Windows.Forms.Panel();
+            this.btnMinimized = new System.Windows.Forms.Button();
+            this.btnFullScreen = new System.Windows.Forms.Button();
+            this.lbTitle = new System.Windows.Forms.Label();
+            this.btnCloseApp = new System.Windows.Forms.Button();
             this.uC_Home1 = new HCG.Views.UC_Home();
             this.uC_Consultant1 = new HCG.Views.UC_Consultant();
             this.uC_Infor1 = new HCG.Views.UC_Infor();
             this.uC_Manage1 = new HCG.Views.UC_Manage();
             this.panelSidebar.SuspendLayout();
             this.panelLogo.SuspendLayout();
-            this.panelHeader2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelHeader2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSidebar
@@ -71,128 +71,6 @@ namespace HCG.Views
             this.panelSidebar.Name = "panelSidebar";
             this.panelSidebar.Size = new System.Drawing.Size(299, 770);
             this.panelSidebar.TabIndex = 0;
-            // 
-            // SidePanel
-            // 
-            this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(27)))), ((int)(((byte)(55)))));
-            this.SidePanel.Location = new System.Drawing.Point(1, 219);
-            this.SidePanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.SidePanel.Name = "SidePanel";
-            this.SidePanel.Size = new System.Drawing.Size(11, 66);
-            this.SidePanel.TabIndex = 2;
-            // 
-            // panelLogo
-            // 
-            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(27)))), ((int)(((byte)(55)))));
-            this.panelLogo.Controls.Add(this.label2);
-            this.panelLogo.Controls.Add(this.label1);
-            this.panelLogo.Controls.Add(this.pictureBox1);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(299, 212);
-            this.panelLogo.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(21, 162);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(258, 35);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "MUA ĐIỆN THOẠI";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(91, 114);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 35);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "TƯ VẤN";
-            // 
-            // panelHeader1
-            // 
-            this.panelHeader1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(27)))), ((int)(((byte)(55)))));
-            this.panelHeader1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelHeader1.Location = new System.Drawing.Point(299, 0);
-            this.panelHeader1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelHeader1.Name = "panelHeader1";
-            this.panelHeader1.Size = new System.Drawing.Size(1213, 6);
-            this.panelHeader1.TabIndex = 1;
-            // 
-            // panelHeader2
-            // 
-            this.panelHeader2.BackColor = System.Drawing.Color.White;
-            this.panelHeader2.Controls.Add(this.btnMinimized);
-            this.panelHeader2.Controls.Add(this.btnFullScreen);
-            this.panelHeader2.Controls.Add(this.lbTitle);
-            this.panelHeader2.Controls.Add(this.btnCloseApp);
-            this.panelHeader2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelHeader2.Location = new System.Drawing.Point(299, 6);
-            this.panelHeader2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelHeader2.Name = "panelHeader2";
-            this.panelHeader2.Size = new System.Drawing.Size(1213, 39);
-            this.panelHeader2.TabIndex = 3;
-            this.panelHeader2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelHeader2_MouseDown);
-            // 
-            // lbTitle
-            // 
-            this.lbTitle.AutoSize = true;
-            this.lbTitle.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lbTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTitle.Location = new System.Drawing.Point(0, 0);
-            this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(130, 29);
-            this.lbTitle.TabIndex = 1;
-            this.lbTitle.Text = "Trang chủ";
-            // 
-            // btnMinimized
-            // 
-            this.btnMinimized.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMinimized.FlatAppearance.BorderSize = 0;
-            this.btnMinimized.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimized.Image = global::HCG.Properties.Resources.subtract_20px;
-            this.btnMinimized.Location = new System.Drawing.Point(1030, 0);
-            this.btnMinimized.Name = "btnMinimized";
-            this.btnMinimized.Size = new System.Drawing.Size(61, 39);
-            this.btnMinimized.TabIndex = 3;
-            this.btnMinimized.UseVisualStyleBackColor = true;
-            this.btnMinimized.Click += new System.EventHandler(this.btnMinimized_Click);
-            // 
-            // btnFullScreen
-            // 
-            this.btnFullScreen.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnFullScreen.FlatAppearance.BorderSize = 0;
-            this.btnFullScreen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFullScreen.Image = global::HCG.Properties.Resources.full_screen_20px;
-            this.btnFullScreen.Location = new System.Drawing.Point(1091, 0);
-            this.btnFullScreen.Name = "btnFullScreen";
-            this.btnFullScreen.Size = new System.Drawing.Size(61, 39);
-            this.btnFullScreen.TabIndex = 2;
-            this.btnFullScreen.UseVisualStyleBackColor = true;
-            this.btnFullScreen.Click += new System.EventHandler(this.btnFullScreen_Click);
-            // 
-            // btnCloseApp
-            // 
-            this.btnCloseApp.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnCloseApp.FlatAppearance.BorderSize = 0;
-            this.btnCloseApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseApp.Image = global::HCG.Properties.Resources.delete_15px;
-            this.btnCloseApp.Location = new System.Drawing.Point(1152, 0);
-            this.btnCloseApp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCloseApp.Name = "btnCloseApp";
-            this.btnCloseApp.Size = new System.Drawing.Size(61, 39);
-            this.btnCloseApp.TabIndex = 0;
-            this.btnCloseApp.UseVisualStyleBackColor = true;
-            this.btnCloseApp.Click += new System.EventHandler(this.btnCloseApp_Click);
-            this.btnCloseApp.MouseLeave += new System.EventHandler(this.btnCloseApp_MouseLeave);
-            this.btnCloseApp.MouseHover += new System.EventHandler(this.btnCloseApp_MouseHover);
             // 
             // btnInfor
             // 
@@ -248,6 +126,15 @@ namespace HCG.Views
             this.btnConsultant.UseVisualStyleBackColor = true;
             this.btnConsultant.Click += new System.EventHandler(this.btnConsultant_Click);
             // 
+            // SidePanel
+            // 
+            this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(27)))), ((int)(((byte)(55)))));
+            this.SidePanel.Location = new System.Drawing.Point(1, 219);
+            this.SidePanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SidePanel.Name = "SidePanel";
+            this.SidePanel.Size = new System.Drawing.Size(11, 66);
+            this.SidePanel.TabIndex = 2;
+            // 
             // btnHome
             // 
             this.btnHome.FlatAppearance.BorderSize = 0;
@@ -266,6 +153,41 @@ namespace HCG.Views
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
+            // panelLogo
+            // 
+            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(27)))), ((int)(((byte)(55)))));
+            this.panelLogo.Controls.Add(this.label2);
+            this.panelLogo.Controls.Add(this.label1);
+            this.panelLogo.Controls.Add(this.pictureBox1);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(299, 212);
+            this.panelLogo.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(21, 162);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(258, 35);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "MUA ĐIỆN THOẠI";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(91, 114);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(122, 35);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "TƯ VẤN";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(27)))), ((int)(((byte)(55)))));
@@ -277,6 +199,84 @@ namespace HCG.Views
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // panelHeader1
+            // 
+            this.panelHeader1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(27)))), ((int)(((byte)(55)))));
+            this.panelHeader1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelHeader1.Location = new System.Drawing.Point(299, 0);
+            this.panelHeader1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelHeader1.Name = "panelHeader1";
+            this.panelHeader1.Size = new System.Drawing.Size(1213, 6);
+            this.panelHeader1.TabIndex = 1;
+            // 
+            // panelHeader2
+            // 
+            this.panelHeader2.BackColor = System.Drawing.Color.White;
+            this.panelHeader2.Controls.Add(this.btnMinimized);
+            this.panelHeader2.Controls.Add(this.btnFullScreen);
+            this.panelHeader2.Controls.Add(this.lbTitle);
+            this.panelHeader2.Controls.Add(this.btnCloseApp);
+            this.panelHeader2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelHeader2.Location = new System.Drawing.Point(299, 6);
+            this.panelHeader2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelHeader2.Name = "panelHeader2";
+            this.panelHeader2.Size = new System.Drawing.Size(1213, 39);
+            this.panelHeader2.TabIndex = 3;
+            this.panelHeader2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelHeader2_MouseDown);
+            // 
+            // btnMinimized
+            // 
+            this.btnMinimized.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMinimized.FlatAppearance.BorderSize = 0;
+            this.btnMinimized.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimized.Image = global::HCG.Properties.Resources.subtract_20px;
+            this.btnMinimized.Location = new System.Drawing.Point(1030, 0);
+            this.btnMinimized.Name = "btnMinimized";
+            this.btnMinimized.Size = new System.Drawing.Size(61, 39);
+            this.btnMinimized.TabIndex = 3;
+            this.btnMinimized.UseVisualStyleBackColor = true;
+            this.btnMinimized.Click += new System.EventHandler(this.btnMinimized_Click);
+            // 
+            // btnFullScreen
+            // 
+            this.btnFullScreen.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnFullScreen.FlatAppearance.BorderSize = 0;
+            this.btnFullScreen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFullScreen.Image = global::HCG.Properties.Resources.full_screen_20px;
+            this.btnFullScreen.Location = new System.Drawing.Point(1091, 0);
+            this.btnFullScreen.Name = "btnFullScreen";
+            this.btnFullScreen.Size = new System.Drawing.Size(61, 39);
+            this.btnFullScreen.TabIndex = 2;
+            this.btnFullScreen.UseVisualStyleBackColor = true;
+            this.btnFullScreen.Click += new System.EventHandler(this.btnFullScreen_Click);
+            // 
+            // lbTitle
+            // 
+            this.lbTitle.AutoSize = true;
+            this.lbTitle.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lbTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitle.Location = new System.Drawing.Point(0, 0);
+            this.lbTitle.Name = "lbTitle";
+            this.lbTitle.Size = new System.Drawing.Size(130, 29);
+            this.lbTitle.TabIndex = 1;
+            this.lbTitle.Text = "Trang chủ";
+            // 
+            // btnCloseApp
+            // 
+            this.btnCloseApp.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnCloseApp.FlatAppearance.BorderSize = 0;
+            this.btnCloseApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseApp.Image = global::HCG.Properties.Resources.delete_15px;
+            this.btnCloseApp.Location = new System.Drawing.Point(1152, 0);
+            this.btnCloseApp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCloseApp.Name = "btnCloseApp";
+            this.btnCloseApp.Size = new System.Drawing.Size(61, 39);
+            this.btnCloseApp.TabIndex = 0;
+            this.btnCloseApp.UseVisualStyleBackColor = true;
+            this.btnCloseApp.Click += new System.EventHandler(this.btnCloseApp_Click);
+            this.btnCloseApp.MouseLeave += new System.EventHandler(this.btnCloseApp_MouseLeave);
+            this.btnCloseApp.MouseHover += new System.EventHandler(this.btnCloseApp_MouseHover);
             // 
             // uC_Home1
             // 
@@ -337,9 +337,9 @@ namespace HCG.Views
             this.panelSidebar.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelHeader2.ResumeLayout(false);
             this.panelHeader2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
