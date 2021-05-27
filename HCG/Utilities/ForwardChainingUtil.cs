@@ -6,9 +6,7 @@ using System.Linq;
 namespace HCG.Utils
 {
     /// <summary>
-    /// Tien ich <b>suy dien tien</b>, bao gom cac thuat toan :<br/>
-    /// - Suy dien tien.<br/>
-    /// - Toi uu hoa tap luat : loai bo luat du thua, loai bo su kien du thua.<br/>
+    /// Tien ich <b>suy dien tien</b>.
     /// <i>Ngay cap nhat: 18/04/2021</i><br/>
     /// <b>Author : Luu Ba Minh</b>
     /// </summary>
@@ -26,7 +24,7 @@ namespace HCG.Utils
         {
             // Ket qua
             var result = new List<MobileDTO>();
-            // Lay tat ca cac luat trong database
+            // Lay tat ca cac luat trong database va tou uu hoa tap luat
             List<RuleDTO> rules = OptimizeRule(RulesBLL.FindAll());
             //List<RuleDTO> rules = RulesBLL.FindAll();
             List<RuleDTO> rulesCopy = new List<RuleDTO>(rules);
@@ -79,7 +77,6 @@ namespace HCG.Utils
             // Tim cac luat tu cuoi 
             for(int i = rules.Count - 1; i >= 0; i--)
             {
-                // Xet luat thu i
                 var rule = rules[i];
                 // Bien kiem tra xem cac su kien trong luat thu i co nam trong bien trung gian hay khong
                 bool isContainAll = true;
@@ -177,6 +174,12 @@ namespace HCG.Utils
             }
         }
 
+        /// <summary>
+        /// Phuong thuc them mot phan tu vao mang(string) mot chieu
+        /// </summary>
+        /// <param name="array"></param>
+        /// <param name="item"></param>
+        /// <returns></returns>
         private static string[] Append(string[] array, string item)
         {
             if (array == null)
@@ -187,13 +190,6 @@ namespace HCG.Utils
             array.CopyTo(result, 0);
             result[array.Length] = item;
             return result;
-        }
-        public static List<RuleDTO> testRule()
-        {
-            List<RuleDTO> rules = RulesBLL.FindAll();
-            //RemoveRuleRedundant(rules);
-            RemoveEventRedundant(rules);
-            return rules;
         }
 
         /// <summary>

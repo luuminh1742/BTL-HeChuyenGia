@@ -121,12 +121,6 @@ namespace HCG.Views
             }
             this.dgvResult.Visible = true;
             pnResult.Visible = true;
-            /*List<string> checkRule = new List<string>();
-            ForwardChainingUtil.testRule().ForEach(rule =>
-            {
-                checkRule.Add(string.Join("^", rule.Left) + " -> " + rule.Right);
-            });
-            this.dgvResult.DataSource = checkRule.Select(x => new { Value = x }).ToList();*/
             this.dgvResult.DataSource = mobiles;
             this.dgvResult.Columns["Id"].Visible = false;
         }

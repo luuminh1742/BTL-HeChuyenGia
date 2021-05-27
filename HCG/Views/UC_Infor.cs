@@ -13,10 +13,10 @@ namespace HCG.Views
 
         private void lbDocumentation_Click(object sender, EventArgs e)
         {
-            /*Process p = new Process();
+            Process p = new Process();
             ProcessStartInfo pi = new ProcessStartInfo();
             pi.UseShellExecute = true;
-            pi.FileName = @"..\..\BaoCao\BaoCao_BTL-HeChuyenGia_TuVanMuaDienThoai.pdf";
+            pi.FileName = @"..\..\Documentation\BaoCao_BTL-HeChuyenGia_TuVanMuaDienThoai.pdf";
             p.StartInfo = pi;
             try
             {
@@ -25,7 +25,7 @@ namespace HCG.Views
             catch (Exception Ex)
             {
                 MessageBox.Show(Ex.Message);
-            }*/
+            }
         }
     }
 }

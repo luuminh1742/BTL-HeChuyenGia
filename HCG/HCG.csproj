@@ -79,8 +79,8 @@
     <Compile Include="DTO\RuleDTO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utils\ForwardChainingUtil.cs" />
-    <Compile Include="Utils\MoveItem.cs" />
+    <Compile Include="Utilities\ForwardChainingUtil.cs" />
+    <Compile Include="Utilities\MoveItem.cs" />
     <Compile Include="Views\FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +144,7 @@
     <None Include="db.dbml.layout">
       <DependentUpon>db.dbml</DependentUpon>
     </None>
+    <None Include="Documentation\BaoCao_BTL-HeChuyenGia_TuVanMuaDienThoai.pdf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

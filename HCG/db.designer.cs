@@ -33,9 +33,6 @@ namespace HCG
     partial void InsertBrand(Brand instance);
     partial void UpdateBrand(Brand instance);
     partial void DeleteBrand(Brand instance);
-    partial void InsertRule(Rule instance);
-    partial void UpdateRule(Rule instance);
-    partial void DeleteRule(Rule instance);
     partial void InsertColor(Color instance);
     partial void UpdateColor(Color instance);
     partial void DeleteColor(Color instance);
@@ -57,6 +54,9 @@ namespace HCG
     partial void InsertPurpose(Purpose instance);
     partial void UpdatePurpose(Purpose instance);
     partial void DeletePurpose(Purpose instance);
+    partial void InsertRule(Rule instance);
+    partial void UpdateRule(Rule instance);
+    partial void DeleteRule(Rule instance);
     #endregion
 		
 		public dbDataContext() : 
@@ -94,14 +94,6 @@ namespace HCG
 			get
 			{
 				return this.GetTable<Brand>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Rule> Rules
-		{
-			get
-			{
-				return this.GetTable<Rule>();
 			}
 		}
 		
@@ -158,6 +150,14 @@ namespace HCG
 			get
 			{
 				return this.GetTable<Purpose>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Rule> Rules
+		{
+			get
+			{
+				return this.GetTable<Rule>();
 			}
 		}
 	}
@@ -223,116 +223,6 @@ namespace HCG
 					this._Name = value;
 					this.SendPropertyChanged("Name");
 					this.OnNameChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Rules")]
-	public partial class Rule : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _Id;
-		
-		private string _RLeft;
-		
-		private string _RRight;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIdChanging(int value);
-    partial void OnIdChanged();
-    partial void OnRLeftChanging(string value);
-    partial void OnRLeftChanged();
-    partial void OnRRightChanging(string value);
-    partial void OnRRightChanged();
-    #endregion
-		
-		public Rule()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int Id
-		{
-			get
-			{
-				return this._Id;
-			}
-			set
-			{
-				if ((this._Id != value))
-				{
-					this.OnIdChanging(value);
-					this.SendPropertyChanging();
-					this._Id = value;
-					this.SendPropertyChanged("Id");
-					this.OnIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RLeft", DbType="NVarChar(255)")]
-		public string RLeft
-		{
-			get
-			{
-				return this._RLeft;
-			}
-			set
-			{
-				if ((this._RLeft != value))
-				{
-					this.OnRLeftChanging(value);
-					this.SendPropertyChanging();
-					this._RLeft = value;
-					this.SendPropertyChanged("RLeft");
-					this.OnRLeftChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RRight", DbType="NVarChar(255)")]
-		public string RRight
-		{
-			get
-			{
-				return this._RRight;
-			}
-			set
-			{
-				if ((this._RRight != value))
-				{
-					this.OnRRightChanging(value);
-					this.SendPropertyChanging();
-					this._RRight = value;
-					this.SendPropertyChanged("RRight");
-					this.OnRRightChanged();
 				}
 			}
 		}
@@ -1127,6 +1017,116 @@ namespace HCG
 					this._Name = value;
 					this.SendPropertyChanged("Name");
 					this.OnNameChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Rules")]
+	public partial class Rule : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private string _RLeft;
+		
+		private string _RRight;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnRLeftChanging(string value);
+    partial void OnRLeftChanged();
+    partial void OnRRightChanging(string value);
+    partial void OnRRightChanged();
+    #endregion
+		
+		public Rule()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RLeft", DbType="NVarChar(255)")]
+		public string RLeft
+		{
+			get
+			{
+				return this._RLeft;
+			}
+			set
+			{
+				if ((this._RLeft != value))
+				{
+					this.OnRLeftChanging(value);
+					this.SendPropertyChanging();
+					this._RLeft = value;
+					this.SendPropertyChanged("RLeft");
+					this.OnRLeftChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RRight", DbType="NVarChar(255)")]
+		public string RRight
+		{
+			get
+			{
+				return this._RRight;
+			}
+			set
+			{
+				if ((this._RRight != value))
+				{
+					this.OnRRightChanging(value);
+					this.SendPropertyChanging();
+					this._RRight = value;
+					this.SendPropertyChanged("RRight");
+					this.OnRRightChanged();
 				}
 			}
 		}
