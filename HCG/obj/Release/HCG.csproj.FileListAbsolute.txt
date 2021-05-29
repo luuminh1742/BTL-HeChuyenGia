@@ -12,3 +12,4 @@ D:\Sources\CSharp\HCG\HCG\obj\Release\HCG.csproj.GenerateResource.cache
 D:\Sources\CSharp\HCG\HCG\obj\Release\HCG.csproj.CoreCompileInputs.cache
 D:\Sources\CSharp\HCG\HCG\obj\Release\HCG.exe
 D:\Sources\CSharp\HCG\HCG\obj\Release\HCG.pdb
+D:\Sources\CSharp\HCG\HCG\obj\Release\HCG.Views.FormTest.resources

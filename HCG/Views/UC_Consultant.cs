@@ -134,5 +134,11 @@ namespace HCG.Views
 
             MessageBox.Show(mobileDTO.ToString(),"Thông tin điện thoại",MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
+
+        private void btnCheckRule_Click(object sender, EventArgs e)
+        {
+            FormTest formTest = new FormTest();
+            formTest.ShowDialog();
+        }
     }
 }

@@ -12,3 +12,4 @@ D:\Sources\CSharp\HCG\HCG\obj\Debug\HCG.Views.UC_Consultant.resources
 D:\Sources\CSharp\HCG\HCG\obj\Debug\HCG.Views.UC_Home.resources
 D:\Sources\CSharp\HCG\HCG\obj\Debug\HCG.Views.UC_Infor.resources
 D:\Sources\CSharp\HCG\HCG\obj\Debug\HCG.Views.UC_Manage.resources
+D:\Sources\CSharp\HCG\HCG\obj\Debug\HCG.Views.FormTest.resources
