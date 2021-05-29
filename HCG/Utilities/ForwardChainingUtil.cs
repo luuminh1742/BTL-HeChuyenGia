@@ -8,7 +8,6 @@ namespace HCG.Utils
     /// <summary>
     /// Tien ich <b>suy dien tien</b>.
     /// <i>Ngay cap nhat: 18/04/2021</i><br/>
-    /// <b>Author : Luu Ba Minh</b>
     /// </summary>
     /// 
     class ForwardChainingUtil
@@ -53,7 +52,6 @@ namespace HCG.Utils
         /// <returns></returns>
         public static List<MobileDTO> Result(List<string> assumptions)
         {
-            
             // Ket qua
             var result = new List<MobileDTO>();
             // Lay tat ca cac luat trong database va tou uu hoa tap luat
@@ -204,9 +202,8 @@ namespace HCG.Utils
             result[array.Length] = item;
             return result;
         }
-
         /// <summary>
-        /// Phuong thuc <b>loai bo luat du thua</b><br/>
+        /// Phuong thuc <b>loai bo luat du thua</b>:<br/>
         /// <i>Ngay cap nhat : 18/04/2021</i>
         /// </summary>
         /// <param name="rules"></param>
